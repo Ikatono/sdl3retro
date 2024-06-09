@@ -1,0 +1,11 @@
+#ifndef H_FAF4409B9CB64DB69008BFA25158639F
+#define H_FAF4409B9CB64DB69008BFA25158639F
+
+#include "input.hpp"
+
+namespace Input
+{
+    int connectAllGamepads();
+}
+
+#endif //H_FAF4409B9CB64DB69008BFA25158639F
