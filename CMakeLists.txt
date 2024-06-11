@@ -22,6 +22,7 @@ add_executable(sdl3retro WIN32
     src/main.cpp
     src/input.cpp
     src/core.cpp
+    src/audio.cpp
     )
 
 # Link to the actual SDL3 library.

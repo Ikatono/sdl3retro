@@ -17,13 +17,14 @@ int SDL_AppInit(void **appstate, int argc, char **argv)
 {
     // std::cout << "app init" << std::endl;
     SDL_assert(argc == 1 || argc == 2);
-    auto ret = Core::load(argv[1]);
+    const auto& coreName = argv[1];
+    auto ret = Core::load(coreName);
     if (ret)
     {
-        std::cout << "failed to load core: " << ret << std::endl;
+        std::cout << "failed to load core: " << coreName << " code: " << ret << std::endl;
         return SDL_APP_FAILURE;
     }
-    std::cout << "loaded core: " << argv[1] << std::endl;
+    std::cout << "loaded core: " << coreName << std::endl;
     const auto core = Core::getCore();
     SDL_assert(core);
     SDL_assert(core->retro_api_version);
